@@ -83,8 +83,16 @@ static const NSCalendarUnit kCalendarUnitYMD = NSCalendarUnitYear | NSCalendarUn
 - (void)simpleCalendarCommonInit
 {
     self.overlayView = [[UILabel alloc] init];
-    self.backgroundColor = [UIColor whiteColor];
-    self.overlayTextColor = [UIColor blackColor];
+
+    // Use semantic colors for iOS 13+
+    if (@available(iOS 13.0, *)) {
+        self.backgroundColor = [UIColor systemBackgroundColor];
+        self.overlayTextColor = [UIColor labelColor];
+    } else {
+        self.backgroundColor = [UIColor whiteColor];
+        self.overlayTextColor = [UIColor blackColor];
+    }
+
     self.daysPerWeek = 7;
     self.weekdayHeaderEnabled = NO;
     self.weekdayTextType = PDTSimpleCalendarViewWeekdayTextTypeShort;
