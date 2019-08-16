@@ -1,5 +1,9 @@
 ##PDTSimpleCalendar Release Notes
 
+###0.10.0
+- Support iOS 13+ dark mode
+- Refactor demo project
+
 ###0.9.1
 - Fix bug on iOS7 related to week calculation and resulting on a crash (#69)
 - Fix Carthage build

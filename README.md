@@ -1,5 +1,8 @@
-PDTSimpleCalendar
+PDTSimpleCalendar (fork)
 =================
+
+This is a fork of the original project that supports iOS 13+ dark mode by using the semantic colors API for
+the background color (`UIColor.systemBackgroundColor`) and text color `UIColor.labelColor`.
 
 [![Pod version](https://img.shields.io/cocoapods/v/PDTSimpleCalendar.svg?style=flat)](http://cocoadocs.org/docsets/PDTSimpleCalendar)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
