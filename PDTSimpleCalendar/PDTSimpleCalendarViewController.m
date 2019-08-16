@@ -308,11 +308,11 @@ static const NSCalendarUnit kCalendarUnitYMD = NSCalendarUnitYear | NSCalendarUn
 
 #pragma mark - Rotation Handling
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    [self.collectionView.collectionViewLayout invalidateLayout];
+  [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+  [self.collectionView.collectionViewLayout invalidateLayout];
 }
-
 
 #pragma mark - Collection View Data Source
 
